@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'Management_system.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'yash_db',     # Your DB name
+        'USER': 'django_user',      # Your DB user (or postgres)
+        'PASSWORD': '123',    # Your DB password
+        'HOST': 'localhost',        # Usually localhost
+        'PORT': '5432',             # Default PostgreSQL port
     }
 }
 
